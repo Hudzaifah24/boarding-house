@@ -11,7 +11,7 @@
                     <form class="d-flex flex-column align-items-center p-4" method="POST" action="{{ route('forgot.password.process') }}">
                         @csrf
                         <div class="col-5 d-flex flex-column align-items-center mb-4">
-                            <label for="email" class="form-label">Your Email</label>
+                            <label for="email" class="form-label">For reset your password please enter Your Email</label>
                             <input type="email" class="form-control  @error('email') is-invalid @enderror p-3" style="background-color: #F2F2F2" placeholder="Email" name="email" id="email" value="{{ old('email') }}">
                             @error('email')
                                 <span class="invalid-feedback" role="alert">

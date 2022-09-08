@@ -32,18 +32,22 @@ class ForgotPasswordController extends Controller
         $user = User::where('email', $request->email)->first();
 
         if ($user) {
-            $user->update([
-                'my_token' => mt_rand(10000, 99999),
-            ]);
+            if (!$user->email_verified == NULL) {
+                $user->update([
+                    'my_token' => mt_rand(10000, 99999),
+                ]);
 
-            $details = [
-                'title' => 'Mail from Boarding House',
-                'body'  => 'This is page for verification your email, Reset Your Password',
-                'email' => $user->email,
-                'token' => $user->my_token,
-            ];
+                $details = [
+                    'title' => 'Mail from Boarding House',
+                    'body'  => 'This is page for verification your email, Reset Your Password',
+                    'email' => $user->email,
+                    'token' => $user->my_token,
+                ];
 
-            Mail::to($user->email)->send(new ForgotPasswordMail($details));
+                Mail::to($user->email)->send(new ForgotPasswordMail($details));
+            } else {
+                return redirect()->back();
+            }
         }
 
         return redirect()->route('forgot.password.confirm.email', $user->id);
@@ -58,18 +62,22 @@ class ForgotPasswordController extends Controller
     {
         $user = User::findOrFail($request->id);
 
-        $user->update([
-            'my_token' => mt_rand(10000, 99999),
-        ]);
+        if (!$user->email_verified == NULL) {
+            $user->update([
+                'my_token' => mt_rand(10000, 99999),
+            ]);
 
-        $details = [
-            'title' => 'Mail from Boarding House',
-            'body' => 'This is page for verification your email, Reset Your Password',
-            'email' => $user->email,
-            'token' => $user->my_token,
-        ];
+            $details = [
+                'title' => 'Mail from Boarding House',
+                'body' => 'This is page for verification your email, Reset Your Password',
+                'email' => $user->email,
+                'token' => $user->my_token,
+            ];
 
-        Mail::to($user->email)->send(new ForgotPasswordMail($details));
+            Mail::to($user->email)->send(new ForgotPasswordMail($details));
+        } else {
+            return redirect()->back();
+        }
 
         return redirect()->back();
     }
