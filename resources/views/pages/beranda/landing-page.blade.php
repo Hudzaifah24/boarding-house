@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('home', 'fw-bold')
+
 @section('content')
     <main>
         <section class="col-12" style="padding-top: 70px; padding-bottom: 70px">
@@ -18,7 +20,7 @@
             </div>
         </section>
 
-        <section id="peaples" class="col-12" style="padding-top: 70px; padding-bottom: 70px; background-color: #D9D9D9">
+        <section id="peoples" class="col-12" style="padding-top: 70px; padding-bottom: 70px; background-color: #D9D9D9">
             <div class="container-fluid">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="col-6">
@@ -28,7 +30,7 @@
                         <p class="paragraph-content">
                             Sampai suatu hari aku sedang bertamasya berasama seluruh keluarga ku. kami merencanakan libur kali ini di kampung nenek ku. kami sekeluarga akan pergi meninggalkan rumah.
                         </p>
-                        <a href="#" class="btn active-a p-3">View Peoples</a>
+                        <a href="{{ route('people.page') }}" class="btn active-a p-3">View Peoples</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +43,7 @@
                         <p class="paragraph-content">
                             Sebelum berangkat ayah ku mengunci pintu dan mengecek semua apakah kondisi rumah baik² saja sebelum kami meninggalkan nya. setelah semua siap kami pun berangkat. aku sedikit sedih untuk meninggalkan rumah ini karena aku menyukai nya.
                         </p>
-                        <a href="#" class="btn active-a p-3">View Photos</a>
+                        <a href="{{ route('photo.page') }}" class="btn active-a p-3">View Photos</a>
                     </div>
                     <div class="col-6">
                         <img class="img-fluid" src="{{ asset('assets/undraw_sweet_home_dkhr.svg') }}" alt="gambar home">
@@ -60,7 +62,7 @@
                         <p class="paragraph-content">
                             Tdk terasa beberapa jam beralalu kami sekeluarga akhirnya sampai di rumah nenek. kakek dan nenek menyambut ki dengam hangat dan membantu membawakan barang kami. liburan di rumah kakek dan nenek memang menyenangkan tapi aku rindu di rumah.
                         </p>
-                        <a href="#" class="btn active-a p-3">About Us</a>
+                        <a href="{{ route('about.us.page') }}" class="btn active-a p-3">About Us</a>
                     </div>
                 </div>
             </div>
@@ -82,9 +84,5 @@
                 </div>
             </div>
         </section>
-
-        <footer class="footer-content">
-            <h6 class="text-center text-white">&copy;copyright Boarding House 2022 - {{ date('Y') }} </h6>
-        </footer>
     </main>
 @endsection

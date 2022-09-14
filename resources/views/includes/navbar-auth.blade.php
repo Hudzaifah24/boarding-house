@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-auth">
+<nav class="navbar navbar-expand navbar-auth shadow">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="{{ route('home') }}">LOGO</a>
         <div>

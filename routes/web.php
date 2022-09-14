@@ -3,7 +3,6 @@
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerificationController;
-use App\Http\Controllers\SuccessController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,13 +40,17 @@ Route::get('reset/password/{email}', [App\Http\Controllers\Auth\ForgotPasswordCo
 Route::post('reset/password/process', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'resetPasswordProcess'])->name('reset.password.process');
 
 // Success
-Route::get('success/page', [SuccessController::class, 'success'])->name('success.page');
+Route::get('success/page', [App\Http\Controllers\SuccessController::class, 'success'])->name('success.page');
 
+// Pages For UI
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/people', [App\Http\Controllers\PeopleController::class, 'index'])->name('people.page');
+Route::get('/photo', [App\Http\Controllers\PhotoController::class, 'index'])->name('photo.page');
+Route::get('/about-us', [App\Http\Controllers\AboutUsController::class, 'index'])->name('about.us.page');
 
 // Auth::routes();
 
 ////////////////////////////////////////////////////
 Route::get('landing-page', function(){
-    return view('pages.beranda.landing-page');
+    return view('pages.beranda.about-us-page');
 });

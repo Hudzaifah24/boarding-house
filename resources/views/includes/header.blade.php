@@ -42,6 +42,14 @@
         letter-spacing: 1px;
         line-height: 40px;
     }
+    /* people page */
+    .border-blue {
+        border: 5px solid #21E1E1;
+    }
+    .background-default {
+        background-color: #F9A826;
+    }
+
     /* Footer */
     .footer-content {
         width: 100%;

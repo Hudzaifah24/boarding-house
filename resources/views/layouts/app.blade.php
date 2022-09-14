@@ -14,5 +14,9 @@
         @include('includes.navbar-landing-page')
 
         @yield('content')
+
+        <footer class="footer-content">
+            <h6 class="text-center text-white">&copy;copyright Boarding House 2022 - {{ date('Y') }} </h6>
+        </footer>
     </body>
 </html>

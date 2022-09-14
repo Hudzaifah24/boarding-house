@@ -1,25 +1,27 @@
-<nav class="navbar navbar-expand navbar-auth">
+<nav class="navbar navbar-expand navbar-auth shadow">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="{{ route('home') }}">LOGO</a>
-        <div>
-            <ul class="navbar-nav gap-5">
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white fw-bold" href="{{ route('home') }}">Home</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#peaples">Peoples</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#photos">Photos</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#about">About Us</a>
-                </li>
-                <li class="nav-item me-3">
-                    <a class="nav-link text-white" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+        @if (request()->is('home'))
+            <div>
+                <ul class="navbar-nav gap-5">
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white @yield('home')" href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white @yield('people')" href="#peoples">Peoples</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white @yield('photo')" href="#photos">Photos</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white @yield('about')" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link text-white @yield('contact')" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        @endif
         <div>
             <ul class="navbar-nav">
                 @guest
