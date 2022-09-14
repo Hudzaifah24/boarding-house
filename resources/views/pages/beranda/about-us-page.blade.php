@@ -12,7 +12,7 @@
                         <h3 class="m-0 text-center">About Us</h3>
                     </div>
                     <div class="d-flex shadow mt-5" style="background-color: #D9D9D9">
-                        <div class="col-6 rounded p-4 d-flex flex-column">
+                        <div class="col-6 rounded p-5 d-flex flex-column">
                             <!-- Floor Plan -->
                             <div class="d-flex flex-column mb-3">
                                 <p class="fw-bold">DENAH</p>
@@ -44,7 +44,7 @@
                                 <p class="m-0">Bayaran (per-bulan x 1 orang) : Wifi : 100k</p>
                             </div>
                         </div>
-                        <div class="col-6 rounded p-4 d-flex flex-column">
+                        <div class="col-6 rounded p-5 d-flex flex-column">
                             <!-- Facility -->
                             <div class="d-flex flex-column mb-3">
                                 <p class="fw-bold">FASILITAS</p>

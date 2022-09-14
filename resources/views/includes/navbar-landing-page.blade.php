@@ -5,19 +5,19 @@
             <div>
                 <ul class="navbar-nav gap-5">
                     <li class="nav-item me-3">
-                        <a class="nav-link text-white @yield('home')" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link text-white @yield('home')" href="{{ route('home') }}" data-aos="zoom-in">Home</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link text-white @yield('people')" href="#peoples">Peoples</a>
+                        <a class="nav-link text-white @yield('people')" href="#peoples" data-aos="zoom-in">Peoples</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link text-white @yield('photo')" href="#photos">Photos</a>
+                        <a class="nav-link text-white @yield('photo')" href="#photos" data-aos="zoom-in">Photos</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link text-white @yield('about')" href="#about">About Us</a>
+                        <a class="nav-link text-white @yield('about')" href="#about" data-aos="zoom-in">About Us</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link text-white @yield('contact')" href="#contact">Contact</a>
+                        <a class="nav-link text-white @yield('contact')" href="#contact" data-aos="zoom-in">Contact</a>
                     </li>
                 </ul>
             </div>

@@ -18,5 +18,9 @@
         <footer class="footer-content">
             <h6 class="text-center text-white">&copy;copyright Boarding House 2022 - {{ date('Y') }} </h6>
         </footer>
+
+        <script>
+            AOS.init();
+          </script>
     </body>
 </html>

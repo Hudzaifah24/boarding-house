@@ -12,16 +12,16 @@
                         <h3 class="m-0 text-center">The are Many More Beauty of Our House</h3>
                     </div>
                     <div class="d-flex justify-content-between gap-2 flex-wrap">
-                        <div class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
+                        <div data-aos="fade-up" class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
                             <img class="w-100 h-100" src="{{ asset('assets/house.jpg') }}" alt="house">
                         </div>
-                        <div class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
+                        <div data-aos="fade-up" class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
                             <img class="w-100 h-100" src="{{ asset('assets/house.jpg') }}" alt="house">
                         </div>
-                        <div class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
+                        <div data-aos="fade-up" class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
                             <img class="w-100 h-100" src="{{ asset('assets/house.jpg') }}" alt="house">
                         </div>
-                        <div class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
+                        <div data-aos="fade-up" class="border-blue background-default mt-5 rounded shadow p-2" style="width: 585px; height: 465px;">
                             <img class="w-100 h-100" src="{{ asset('assets/house.jpg') }}" alt="house">
                         </div>
                     </div>
