@@ -27,6 +27,25 @@
     .active-a {
         color: #ffffff;
         background-color: #21E1E1;
+        position: relative;
+        z-index: 2;
+    }
+    .active-a::before {
+        content: "";
+        top: 0px;
+        left: 0px;
+        width: 0%;
+        height: 10%;
+        border-radius: 5px;
+        position: absolute;
+        background-color: #F9A826;
+        transition: 500ms;
+    }
+    .active-a:hover:before {
+        width: 100%;
+        color: #ffffff;
+        transition: 500ms;
+        z-index: 1;
     }
     .active-a:hover {
         color: #ffffff;
@@ -49,6 +68,31 @@
         border: 5px solid #21E1E1;
     }
     .background-default {
+        background-color: #F9A826;
+    }
+    .people-title {
+        opacity: 0;
+        transition: 600ms;
+    }
+    .place-img:hover .people-title {
+        opacity: 1;
+        transition: 600ms;
+    }
+    .place-img::before {
+        content: "";
+        width: 97%;
+        height: 0px;
+        position: absolute;
+        background-color: #F9A826;
+        bottom: 0px;
+        opacity: 0;
+        transition: 500ms;
+    }
+    .place-img:hover:before {
+        height: 35%;
+        opacity: 0.7;
+        bottom: 0px;
+        transition: 500ms;
         background-color: #F9A826;
     }
 

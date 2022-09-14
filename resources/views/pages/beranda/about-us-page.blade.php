@@ -11,7 +11,7 @@
                         <a href="{{ route('home') }}" class="btn active-a position-absolute">Back</a>
                         <h3 class="m-0 text-center">About Us</h3>
                     </div>
-                    <div class="d-flex shadow mt-5" style="background-color: #D9D9D9">
+                    <div class="d-flex rounded shadow mt-5" style="background-color: #D9D9D9">
                         <div class="col-6 rounded p-5 d-flex flex-column">
                             <!-- Floor Plan -->
                             <div class="d-flex flex-column mb-3">
